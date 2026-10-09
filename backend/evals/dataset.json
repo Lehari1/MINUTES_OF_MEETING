@@ -1,0 +1,135 @@
+[
+  {
+    "id": "eval-01-sprint-planning",
+    "title": "Sprint 42 Planning & Architecture Review",
+    "meeting_date": "2026-10-09",
+    "location": "Zoom Room 4",
+    "transcript": "Sarah: Good morning everyone. Present today are Sarah, Michael, and Priya. Alex sent his apologies. Let's review the goals for Sprint 42. Our primary objective is migrating the authentication service to OAuth2 with PKCE. Michael, can you take ownership of implementing the backend endpoints by next Friday, October 16th? Michael: Yes, I can do that. I'll need Priya to review the schema changes by Wednesday. Priya: Sounds good, I will review the DB schemas by October 14th. Also, we decided to drop support for legacy v1 API tokens starting next month. Sarah: Excellent decision. We also agreed to use Redis cluster for session caching instead of in-memory dictionaries. I'll draft the updated API migration guide by October 18th.",
+    "ground_truth": {
+      "attendees": ["Sarah", "Michael", "Priya"],
+      "meeting_date": "2026-10-09",
+      "location": "Zoom Room 4",
+      "summary": "Sprint 42 planning focused on migrating authentication to OAuth2 with PKCE, deprecating legacy v1 API tokens, and adopting Redis cluster for session caching with specific engineering deliverables assigned across the team.",
+      "discussion_points": [
+        "Review of Sprint 42 goals and auth migration",
+        "OAuth2 with PKCE backend implementation timeline",
+        "Deprecation timeline for legacy v1 tokens",
+        "Session caching architecture with Redis cluster"
+      ],
+      "key_takeaways": [
+        "Primary goal for Sprint 42 is OAuth2 PKCE auth migration",
+        "Legacy v1 tokens will be phased out starting next month",
+        "Redis cluster is chosen for session management"
+      ],
+      "decisions": [
+        "Drop support for legacy v1 API tokens starting next month",
+        "Use Redis cluster for session caching instead of in-memory dictionaries"
+      ],
+      "action_items": [
+        {
+          "task": "Implement OAuth2 backend endpoints",
+          "owner": "Michael",
+          "due_date": "2026-10-16"
+        },
+        {
+          "task": "Review database schema changes",
+          "owner": "Priya",
+          "due_date": "2026-10-14"
+        },
+        {
+          "task": "Draft updated API migration guide",
+          "owner": "Sarah",
+          "due_date": "2026-10-18"
+        }
+      ]
+    }
+  },
+  {
+    "id": "eval-02-incident-postmortem",
+    "title": "Payment Gateway Outage Post-Mortem",
+    "meeting_date": "2026-10-08",
+    "location": "HQ Conference Room B",
+    "transcript": "David: Let's start the post-mortem for yesterday's payment gateway outage. Attending are David, Elena, and Tom. The incident occurred due to an unhandled timeout in third-party webhook processing which exhausted database connection pools. Elena: We decided to implement circuit breaker patterns with Resilience4j across all payment clients. I will implement the circuit breaker by October 12th. Tom: We also agreed to increase the maximum connection pool size from 50 to 200 and add automated alerting when pool utilization exceeds 80%. I'll configure Prometheus alerts by October 11th. David: Great. We decided to conduct bi-weekly chaos engineering tests. I will schedule the first chaos test for October 20th.",
+    "ground_truth": {
+      "attendees": ["David", "Elena", "Tom"],
+      "meeting_date": "2026-10-08",
+      "location": "HQ Conference Room B",
+      "summary": "Post-mortem review of the payment gateway outage caused by webhook timeouts. The team agreed on circuit breaker implementation, DB pool adjustments with Prometheus alerting, and regular chaos engineering testing.",
+      "discussion_points": [
+        "Root cause analysis: webhook timeouts causing DB connection exhaustion",
+        "Implementation of circuit breakers for payment clients",
+        "Connection pool tuning and monitoring improvements",
+        "Chaos testing strategy"
+      ],
+      "key_takeaways": [
+        "Webhook timeouts exhausted connection pools",
+        "Circuit breakers and proactive alerting will prevent future cascading failures"
+      ],
+      "decisions": [
+        "Implement circuit breaker pattern across all payment clients",
+        "Increase DB connection pool limit to 200 and set 80% utilization alert",
+        "Conduct bi-weekly chaos engineering drills"
+      ],
+      "action_items": [
+        {
+          "task": "Implement circuit breaker on payment clients",
+          "owner": "Elena",
+          "due_date": "2026-10-12"
+        },
+        {
+          "task": "Configure Prometheus connection pool alerts",
+          "owner": "Tom",
+          "due_date": "2026-10-11"
+        },
+        {
+          "task": "Schedule first bi-weekly chaos engineering test",
+          "owner": "David",
+          "due_date": "2026-10-20"
+        }
+      ]
+    }
+  },
+  {
+    "id": "eval-03-product-strategy",
+    "title": "Q4 Mobile App Roadmap & Strategy",
+    "meeting_date": "2026-10-05",
+    "location": null,
+    "transcript": "Rachel: Welcome team. Joining the call are Rachel, Marcus, and Chloe. Today we are finalizing the Q4 mobile roadmap. We evaluated offline sync versus real-time collaborative editing. We decided to prioritize offline sync first for the iOS and Android releases. Marcus: I will complete the SQLite sync engine prototype by October 25th. Chloe: We agreed to postpone dark mode customization to Q1 2027 to stay on schedule. I will prepare the revised UI wireframes for offline sync status indicators by October 19th. Rachel: I will update the executive stakeholders and release calendar by October 22nd.",
+    "ground_truth": {
+      "attendees": ["Rachel", "Marcus", "Chloe"],
+      "meeting_date": "2026-10-05",
+      "location": null,
+      "summary": "The mobile product team finalized Q4 priorities, deciding to build offline sync before real-time collaboration, deferring dark mode to next year, and assigning UI wireframe and prototype tasks.",
+      "discussion_points": [
+        "Feature prioritization: offline sync vs real-time collaboration",
+        "SQLite sync engine architecture",
+        "Scope reduction and postponing dark mode"
+      ],
+      "key_takeaways": [
+        "Offline sync is the top deliverable for Q4",
+        "Dark mode pushed to Q1 2027 to protect release timelines"
+      ],
+      "decisions": [
+        "Prioritize offline sync first for iOS and Android",
+        "Postpone dark mode customization to Q1 2027"
+      ],
+      "action_items": [
+        {
+          "task": "Complete SQLite sync engine prototype",
+          "owner": "Marcus",
+          "due_date": "2026-10-25"
+        },
+        {
+          "task": "Prepare revised UI wireframes for offline sync indicators",
+          "owner": "Chloe",
+          "due_date": "2026-10-19"
+        },
+        {
+          "task": "Update executive stakeholders and release calendar",
+          "owner": "Rachel",
+          "due_date": "2026-10-22"
+        }
+      ]
+    }
+  }
+]

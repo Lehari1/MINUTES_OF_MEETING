@@ -1,0 +1,171 @@
+{
+  "timestamp": "2026-10-09 11:07:23 UTC",
+  "total_test_cases": 3,
+  "successful_runs": 3,
+  "schema_validity_rate": "100.0%",
+  "average_latency_sec": 375.65,
+  "aggregate_metrics": {
+    "summary_rouge1": 0.41,
+    "summary_rougeL": 0.335,
+    "attendees_f1": 1.0,
+    "decisions_f1": 0.746,
+    "task_extraction_f1": 0.833,
+    "owner_attribution_accuracy": 0.867
+  },
+  "audio_benchmark": {
+    "sample": "denver_extract.mp3",
+    "latency_sec": 1428.25,
+    "word_count": 2182,
+    "transcript_preview": "kind of the confluence of this whole idea of the confluence week, the merging of two rivers and as we've kind of seen recently in politics and in the world, there's a lot of situations where water is ..."
+  },
+  "details": [
+    {
+      "id": "eval-01-sprint-planning",
+      "title": "Sprint 42 Planning & Architecture Review",
+      "latency_sec": 424.28,
+      "schema_valid": true,
+      "summary_rouge1": 0.442,
+      "summary_rougeL": 0.4,
+      "attendees_f1": 1.0,
+      "decisions_f1": 0.571,
+      "task_f1": 0.5,
+      "owner_accuracy": 0.6,
+      "generated_output": {
+        "summary": "Meeting discussed goals for Sprint 42 including migrating the authentication service to OAuth2 with PKCE. Michael was assigned to implement backend endpoints by October 16th, with Priya reviewing the DB schemas by October 14th. The group decided to drop support for legacy v1 API tokens and switch to Redis cluster for session caching. Sarah will draft the updated API migration guide by October 18th.",
+        "attendees": [
+          "Sarah",
+          "Michael",
+          "Priya"
+        ],
+        "decisions": [
+          "Michael will implement backend endpoints by October 16th",
+          "Priya will review DB schemas by October 14th",
+          "Legacy v1 API token support will be dropped",
+          "Redis cluster will be used for session caching",
+          "Sarah will draft the updated API migration guide by October 18th"
+        ],
+        "action_items": [
+          {
+            "task": "Implement backend endpoints",
+            "owner": "Michael",
+            "due_date": "October 16th",
+            "status": "pending"
+          },
+          {
+            "task": "Review DB schemas",
+            "owner": "Priya",
+            "due_date": "October 14th",
+            "status": "pending"
+          },
+          {
+            "task": "Drop legacy v1 API token support",
+            "owner": "Team",
+            "due_date": "Not specified",
+            "status": "pending"
+          },
+          {
+            "task": "Use Redis cluster for session caching",
+            "owner": "Team",
+            "due_date": "Not specified",
+            "status": "pending"
+          },
+          {
+            "task": "Draft updated API migration guide",
+            "owner": "Sarah",
+            "due_date": "October 18th",
+            "status": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eval-02-incident-postmortem",
+      "title": "Payment Gateway Outage Post-Mortem",
+      "latency_sec": 343.24,
+      "schema_valid": true,
+      "summary_rouge1": 0.463,
+      "summary_rougeL": 0.366,
+      "attendees_f1": 1.0,
+      "decisions_f1": 0.667,
+      "task_f1": 1.0,
+      "owner_accuracy": 1.0,
+      "generated_output": {
+        "summary": "Post-mortem on yesterday's payment gateway outage discussed. Root cause was an unhandled timeout in third-party webhook processing exhausting database connection pools. Decisions made include implementing circuit breaker patterns with Resilience4j, increasing maximum connection pool size from 50 to 200, adding automated alerts, and conducting bi-weekly chaos engineering tests.",
+        "attendees": [
+          "David",
+          "Elena",
+          "Tom"
+        ],
+        "decisions": [
+          "Implement circuit breaker patterns with Resilience4j by October 12th",
+          "Increase maximum connection pool size to 200 by October 11th",
+          "Schedule first chaos test for October 20th"
+        ],
+        "action_items": [
+          {
+            "task": "Implement circuit breaker patterns with Resilience4j",
+            "owner": "Elena",
+            "due_date": "October 12th",
+            "status": "pending"
+          },
+          {
+            "task": "Increase maximum connection pool size to 200",
+            "owner": "Tom",
+            "due_date": "October 11th",
+            "status": "pending"
+          },
+          {
+            "task": "Schedule first chaos test",
+            "owner": "David",
+            "due_date": "October 20th",
+            "status": "pending"
+          }
+        ]
+      }
+    },
+    {
+      "id": "eval-03-product-strategy",
+      "title": "Q4 Mobile App Roadmap & Strategy",
+      "latency_sec": 359.43,
+      "schema_valid": true,
+      "summary_rouge1": 0.326,
+      "summary_rougeL": 0.239,
+      "attendees_f1": 1.0,
+      "decisions_f1": 1.0,
+      "task_f1": 1.0,
+      "owner_accuracy": 1.0,
+      "generated_output": {
+        "summary": "The team discussed the Q4 mobile roadmap focusing on offline sync for iOS and Android releases. They postponed dark mode customization to Q1 2027. Marcus is tasked with completing the SQLite sync engine prototype by October 25th. Chloe will prepare revised UI wireframes for offline sync status indicators by October 19th. Rachel will update the executive stakeholders and release calendar by October 22nd.",
+        "attendees": [
+          "Rachel",
+          "Marcus",
+          "Chloe"
+        ],
+        "decisions": [
+          "Prioritize offline sync for iOS and Android releases",
+          "Postpone dark mode customization to Q1 2027"
+        ],
+        "action_items": [
+          {
+            "task": "Complete the SQLite sync engine prototype",
+            "owner": "Marcus",
+            "due_date": "October 25th",
+            "status": "pending"
+          },
+          {
+            "task": "Prepare revised UI wireframes for offline sync status indicators",
+            "owner": "Chloe",
+            "due_date": "October 19th",
+            "status": "pending"
+          },
+          {
+            "task": "Update executive stakeholders and release calendar",
+            "owner": "Rachel",
+            "due_date": "October 22nd",
+            "status": "pending"
+          }
+        ]
+      }
+    }
+  ]
+}
